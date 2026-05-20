@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do list</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+      <div class="todo-body">
+         <h1>To-do list</h1>
+         <div class="row">
+
+            <div class="inputs">
+               <input type="text" id="field" placeholder="Please enter a task">
+               <input type="datetime-local" id="date">
+            </div>
+            <button onclick="addTask()" >Add Task</button>
+         </div>
+         <ul id="list-container">
+            <!-- <li class="checked">1</li>
+            <li>2</li>
+            <li>3</li> -->
+         </ul>
+      </div>
+    </div>
+
+</body>
+<script src="index.js"></script>
