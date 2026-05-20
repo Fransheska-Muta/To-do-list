@@ -34,29 +34,31 @@
 }
 
 .row{
-    border: 2px solid red;
+    /* border: 2px solid red; */
     /* background-color:#ececec; */
     display: flex;
     align-items: center;
     /* justify-content: space-around; */
     /* margin-top: 3%; */
     width: 80%;
+    height: 70px;
     margin: auto;
 }
 
 .inputs{
     /* border: 2px solid red; */
+    height: 65%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 #date{
-    width: 11.8%;
-    font-weight: bolder;
+    width: 10%;
 }
 
 input{
   width: 100%;
+  height: 100%;
   border: none; 
   padding: 10px;
   background-color: rgb(235, 227, 227);
@@ -76,28 +78,35 @@ ul li{
     margin: auto;
     list-style: none;
     font-size: 20px;
-    padding: 12px 8px 12px 50px;
+    padding: 25px 8px 12px 50px;
     width: 90%;
     margin-top: 4%;
     cursor: pointer;
-    position: relative;
+    position: relative; 
     background-color: rgb(235, 227, 227);
     border-radius: 20px;
+    user-select: none;
 }
 
 ul li::before{
     content: " ";
     position: absolute;
-    left: 3px;
-    top: 9px;
+    left: 15px;
+    top: 25px;
     width: 25px;
     height: 25px;
-    background-color: rgb(181, 45, 199);
+    background-image: url(images/OIP.webp);
+    background-size: cover;
     border-radius: 50%;
 }
 ul li.checked{
     color: red;
     text-decoration: line-through;
+}
+
+ul li.checked::before{
+    background-image: url(images/purple-check-mark-icon-on-transparent-background-free-png.webp);
+
 }
 
 span{
@@ -107,14 +116,15 @@ span{
   font-size: 20px;
 }
 
-
-
+ul li span:hover{
+    color: indigo;
+    font-size: 25px;
+}
 
 @media screen and (max-width: 768px) {
 input{
   width: 85%;
 }
-
 button{
     border: none;
     padding: 3.5px;
@@ -129,6 +139,95 @@ button{
     margin-top: 2%;
     margin-left: 10%
 }
-
-
 }
+
+@media screen and (max-width: 480px) {
+.todo-body{
+    height: 22%;
+    width: 85%;
+}
+.row{
+    /* border: 2px solid red; */
+    width: 100%;
+    margin-top: 0%;
+    margin-left: 0%
+}
+button{
+    border-radius: 40%;
+    font-size: xx-small;
+}
+.inputs{
+    /* border: 2px solid red; */
+    height: 50%;
+}
+#date{
+    width: 15%;
+}
+}
+
+@media screen and (max-width: 855px) {
+.todo-body{
+    height: 22%;
+    width: 85%;
+}
+.row{
+    /* border: 2px solid red; */
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 0%;
+    margin-left: 0%
+}
+}
+
+@media screen and (max-width: 950px) {
+.todo-body{
+    height: 22%;
+    width: 85%;
+}
+.row{
+    /* border: 2px solid red; */
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 0%;
+    margin-left: 0%
+}
+}
+
+@media screen and (max-width: 1290px) {
+   .todo-body{
+    height: 22%;
+    width: 85%;
+}
+.row{
+    /* border: 2px solid red; */
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 0%;
+    margin-left: 0%
+} 
+}
+
+@media screen and (max-width: 300px) {
+.todo-body{
+     width: 85%;
+ }
+.row{
+     /* border: 2px solid red; */
+     width: 100%;
+     display: flex;
+     justify-content: space-around;
+     margin-top: 0%;
+     margin-left: 0%
+ }
+.inputs{
+    /* border: 2px solid red; */
+    height: 50%;
+    width: 60%
+} 
+#date{
+    width: 40%;
+}
+ }
